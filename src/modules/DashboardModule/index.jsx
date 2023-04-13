@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -63,9 +63,25 @@ export const data = {
 };
 
 const DashboardModule = () => {
+  const [activeBtn, setActiveBtn] = useState("Bar");
   return (
     <div className={styles.dashboardWrapper}>
-      <h1>Dashboard</h1>
+      <h1>Select chart type</h1>
+      <div className={styles.typeWrapper}>
+        {["Bar", "Lines", "Graph", "Some other"].map((item, index) => {
+          return (
+            <button
+              key={index}
+              className={`${styles.chatBtn} ${
+                activeBtn === item && styles.activeBtn
+              }`}
+              onClick={() => setActiveBtn(item)}
+            >
+              {item}
+            </button>
+          );
+        })}
+      </div>
       <Bar options={options} data={data} />
     </div>
   );
