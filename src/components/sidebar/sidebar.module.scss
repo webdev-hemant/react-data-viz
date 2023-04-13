@@ -1,7 +1,7 @@
 @import "../../styles/base.module.scss";
 
 .navWrapper {
-  .mobileNav {
+  .navContainer {
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -20,6 +20,23 @@
     }
     .imgWrapper {
       margin: 1rem 0;
+    }
+    .routesWrapper {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      li {
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .activeRoute {
+        color: $color_2;
+      }
     }
   }
   .hiddenNavbarContainer {
@@ -72,13 +89,33 @@
           fill: $color_1;
         }
       }
-      .titleName {
-        a {
-          font-weight: 500;
-          font-size: 1.4rem;
-          cursor: pointer;
-          color: #fff;
-          white-space: nowrap;
+      // .titleName {
+      //   a {
+      //     font-weight: 500;
+      //     font-size: 1.4rem;
+      //     cursor: pointer;
+      //     color: #fff;
+      //     white-space: nowrap;
+      //   }
+      // }
+      .titleWrapper {
+        color: #fff;
+        padding-left: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        .acitveRoute {
+          background-color: $color_3;
+          color: $color_2;
         }
       }
     }
