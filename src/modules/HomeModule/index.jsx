@@ -1,6 +1,4 @@
 import React from "react";
-// import { RootContext } from "ContextApi/RootContext";
-// import { SidebarContext } from "ContextApi/SidebarNavContext";
 // import homeSvg from "images/home.svg";
 import styles from "./home.module.scss";
 
